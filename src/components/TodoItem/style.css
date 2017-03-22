@@ -1,0 +1,12 @@
+.removeButton{
+  float: right;
+}
+
+.finish{
+  text-decoration: line-through;
+  color: red;
+}
+
+.unfinish{
+  color: blueviolet;
+}

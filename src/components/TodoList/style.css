@@ -1,0 +1,13 @@
+.todolist {
+  margin-top: 30px;
+}
+
+.todolist li{
+  text-align: left;
+  margin-top: 5px;
+  list-style: none;
+}
+
+.todolist li label{
+  cursor: pointer;
+}
