@@ -1,11 +1,11 @@
-import { ADD_TODO_ITEM, REMOVE_TODO_ITEM, TOGGLE_TODO_ITEM } from '../actions/types'
+import TYPE from '../actions/types'
 
 const initialState = []
 
 const todosReducer = (todos = initialState, action) => {
   switch (action.type) {
 
-    case ADD_TODO_ITEM: {
+    case TYPE.TODO.ADD: {
       return [
         ...todos,
         {
@@ -16,11 +16,11 @@ const todosReducer = (todos = initialState, action) => {
       ]
     }
 
-    case REMOVE_TODO_ITEM: {
+    case TYPE.TODO.REMOVE: {
       return todos.filter(todo => todo.id !== action.payload.id)
     }
 
-    case TOGGLE_TODO_ITEM: {
+    case TYPE.TODO.TOGGLE: {
       return todos.map(todo => todo.id !== action.payload.id ? todo : { ...todo, finish: !todo.finish })
     }
 

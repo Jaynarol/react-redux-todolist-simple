@@ -1,3 +1,9 @@
-export const ADD_TODO_ITEM = 'ADD_TODO_ITEM'
-export const REMOVE_TODO_ITEM = 'REMOVE_TODO_ITEM'
-export const TOGGLE_TODO_ITEM = 'TOGGLE_TODO_ITEM'
+const TYPE = {
+  TODO: {
+    ADD: 'TODO_ADD',
+    REMOVE: 'TODO_REMOVE',
+    TOGGLE: 'TODO_TOGGLE'
+  }
+}
+
+export default TYPE

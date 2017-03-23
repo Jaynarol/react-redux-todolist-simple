@@ -1,17 +1,17 @@
-import { ADD_TODO_ITEM, REMOVE_TODO_ITEM, TOGGLE_TODO_ITEM } from './types'
+import TYPE from './types'
 
 const addTodoItem = text => ({
-  type: ADD_TODO_ITEM,
+  type: TYPE.TODO.ADD,
   payload: { text }
 })
 
 const removeTodoItem = id => ({
-  type: REMOVE_TODO_ITEM,
+  type: TYPE.TODO.REMOVE,
   payload: { id }
 })
 
 const toggleTodoItem = id => ({
-  type: TOGGLE_TODO_ITEM,
+  type: TYPE.TODO.TOGGLE,
   payload: { id }
 })
 
