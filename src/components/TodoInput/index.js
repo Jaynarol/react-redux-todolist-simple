@@ -1,8 +1,7 @@
 import { connect } from 'react-redux'
 import TodoInput from './TodoInput'
-import { addTodoItem } from '../../actions/todos'
+import { addTodo } from '../../actions/todos'
 
-const mapStateToProps = null
-const mapDispatchToProps = { addTodoItem }
+const mapActionToProps = { addTodo }
 
-export default connect(mapStateToProps, mapDispatchToProps)(TodoInput)
+export default connect(null, mapActionToProps)(TodoInput)

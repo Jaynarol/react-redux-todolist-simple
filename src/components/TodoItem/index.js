@@ -1,8 +1,8 @@
 import { connect } from 'react-redux'
 import TodoItem from './TodoItem'
-import { removeTodoItem, toggleTodoItem } from '../../actions/todos'
+import { removeTodo, toggleTodo } from '../../actions/todos'
 
-const mapStateToProps = (state, props) => ({ ...props })
-const mapDispatchToProps = { removeTodoItem, toggleTodoItem }
+const mapStoreToProps = (state, props) => props
+const mapActionToProps = { removeTodo, toggleTodo }
 
-export default connect(mapStateToProps, mapDispatchToProps)(TodoItem)
+export default connect(mapStoreToProps, mapActionToProps)(TodoItem)

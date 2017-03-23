@@ -8,7 +8,7 @@ class TodoInput extends Component {
 
   handleInputEnter = event => {
     if (event.key === 'Enter' && this.state.task) {
-      this.props.addTodoItem(this.state.task)
+      this.props.addTodo(this.state.task)
       this.setState({ task: '' })
     }
   }
@@ -32,7 +32,7 @@ class TodoInput extends Component {
 }
 
 TodoInput.propTypes = {
-  addTodoItem: PropTypes.func.isRequired
+  addTodo: PropTypes.func.isRequired
 }
 
 export default TodoInput

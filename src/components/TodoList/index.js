@@ -1,7 +1,8 @@
 import { connect } from 'react-redux'
 import TodoList from './TodoList'
 
-const mapStateToProps = ({ todos }) => ({ todos })
-const mapDispatchToProps = {}
+const mapStoreToProps = store => ({
+  todos: store.todos
+})
 
-export default connect(mapStateToProps, mapDispatchToProps)(TodoList)
+export default connect(mapStoreToProps)(TodoList)

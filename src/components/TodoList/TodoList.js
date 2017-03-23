@@ -5,7 +5,8 @@ import './style.css'
 const TodoList = ({ todos }) => (
   <ul className="todolist">
     {
-      todos.map(todo => <TodoItem key={todo.id} {...todo} />)
+      todos.map(todo =>
+        <TodoItem key={todo.id} {...todo} />)
     }
   </ul>
 )

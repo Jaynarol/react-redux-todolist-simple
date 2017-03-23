@@ -1,22 +1,16 @@
 import TYPE from './types'
 
-const addTodoItem = text => ({
+export const addTodo = text => ({
   type: TYPE.TODO.ADD,
   payload: { text }
 })
 
-const removeTodoItem = id => ({
+export const removeTodo = id => ({
   type: TYPE.TODO.REMOVE,
   payload: { id }
 })
 
-const toggleTodoItem = id => ({
+export const toggleTodo = id => ({
   type: TYPE.TODO.TOGGLE,
   payload: { id }
 })
-
-export {
-  addTodoItem,
-  removeTodoItem,
-  toggleTodoItem
-}
