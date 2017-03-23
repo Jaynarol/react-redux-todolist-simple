@@ -1,7 +1,7 @@
 import TYPE from '../actions/types'
 import { initialStore } from '../store'
 
-const genarateNewTodo = function (todos, text) {
+const createNewTodo = function (todos, text) {
   return {
     id: todos.length ? todos[todos.length - 1].id + 1 : 1,
     text,
@@ -12,7 +12,7 @@ const genarateNewTodo = function (todos, text) {
 export default (todos = initialStore.todos, action) => {
   switch (action.type) {
     case TYPE.TODO.ADD: {
-      return [...todos, genarateNewTodo(todos, action.payload.text)]
+      return [...todos, createNewTodo(todos, action.payload.text)]
     }
     case TYPE.TODO.REMOVE: {
       return todos.filter(todo => todo.id !== action.payload.id)

@@ -14,7 +14,7 @@ class TodoInput extends Component {
   }
 
   handleInputChange = event => {
-    this.setState({ task: event.target.value })
+    this.setState({ [event.target.name]: event.target.value })
   }
 
   render() {
