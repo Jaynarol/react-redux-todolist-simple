@@ -1,6 +1,6 @@
 import TYPE from '../actions/types'
+import { initialStore } from '../store'
 
-const initialState = []
 const genarateNewTodo = function (todos, text) {
   return {
     id: todos.length ? todos[todos.length - 1].id + 1 : 1,
@@ -9,7 +9,7 @@ const genarateNewTodo = function (todos, text) {
   }
 }
 
-const todosReducer = (todos = initialState, action) => {
+export default (todos = initialStore.todos, action) => {
   switch (action.type) {
     case TYPE.TODO.ADD: {
       return [...todos, genarateNewTodo(todos, action.payload.text)]
@@ -25,5 +25,3 @@ const todosReducer = (todos = initialState, action) => {
     }
   }
 }
-
-export default todosReducer
