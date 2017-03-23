@@ -1,26 +1,8 @@
-import React, { PropTypes } from 'react'
-import TodoItem from '../TodoItem'
-import './style.css'
+import { connect } from 'react-redux'
+import TodoList from './TodoList'
 
-const TodoList = ({ todos, handleToggleFinish, handleRemoveItem }) => (
-  <ul className="todolist">
-    {
-      todos.map(todo =>
-        <TodoItem key={todo.id} {...todo} handleToggleFinish={handleToggleFinish} handleRemoveItem={handleRemoveItem} />)
-    }
-  </ul>
-)
+const mapStoreToProps = store => ({
+  todos: store.todos
+})
 
-TodoList.propTypes = {
-  todos: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      text: PropTypes.string.isRequired,
-      finish: PropTypes.bool.isRequired,
-    }),
-  ).isRequired,
-  handleToggleFinish: PropTypes.func.isRequired,
-  handleRemoveItem: PropTypes.func.isRequired,
-}
-
-export default TodoList
+export default connect(mapStoreToProps)(TodoList)
